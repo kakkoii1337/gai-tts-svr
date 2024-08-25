@@ -1,0 +1,54 @@
+[tool.poetry]
+name = "gai-tts-svr"
+version = "0.200"
+description = "Refer to https://gai-labs.github.io/gai for more information"
+authors = ["kakkoii1337 <kakkoii1337@gmail.com>"]
+license = "MIT"
+classifiers = [
+    "Programming Language :: Python :: 3.10",
+    "Development Status :: 3 - Alpha",
+    "License :: OSI Approved :: MIT License",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Topic :: Software Development",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence"
+]
+packages = [
+    { include = "gai/tts/server", from="./src"}
+]
+include = [
+]
+
+[tool.poetry.dependencies]
+python = "^3.10, <3.12"
+torch = "2.2.0"
+torchaudio = "2.2.0"
+transformers = "4.36.2"
+openai = "^1.40.0, <2.0.0"
+python-dotenv = "^1.0.1"
+TTS = "0.22.0"
+uvicorn = "0.23.2"
+ninja = "1.11.1.1"
+fastapi = "^0.112.0"
+numpy = "^1.22.0"
+gai-sdk = { path ="..", develop=true }
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.2"
+nox = "^2024.4.15"
+twine = "^5.1.1"
+"keyrings.alt" = "^5.0.1"
+ipykernel = "^6.29.5"
+toml = "^0.10.2"
+flake8 = "^7.1.1"
+pytest-ordering = "^0.6"
+ipywidgets = "*"
+
+[build-system]
+requires = ["poetry-core>=1.8.3"]
+build-backend = "poetry.core.masonry.api"
+
+
+

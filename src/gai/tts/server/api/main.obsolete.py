@@ -50,7 +50,7 @@ host = None
 gai_config = None
 
 # STARTUP
-from gai.lib.common.utils import get_gai_config
+from gai.lib.config.config_utils import get_gai_config
 DEFAULT_GENERATOR=os.getenv("DEFAULT_GENERATOR")
 async def startup_event():
     global host,gai_config
